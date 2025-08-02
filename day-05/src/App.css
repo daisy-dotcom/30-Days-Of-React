@@ -115,7 +115,29 @@ img {
   padding: 2% 0;
 }
 
+.img-wrapper{
+  text-align: center;
+}
 
+.img-styles{
+  margin: 0.25em 2em;
+  padding: 0.1em;
+}
+
+.skills-list{
+  margin: 0.5em 0;
+  padding: 0;
+}
+
+.skills-list li{
+  display: inline-block;
+  background: #9aede6;
+  border-radius: 0.15em;
+  margin: 0.25em 0.25em;
+  padding: 0.15em 0.25em;
+  text-align: center;
+  color: white;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
