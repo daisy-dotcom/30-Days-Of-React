@@ -1,6 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
 import daisyImage from './images/daisy.jpg';
+import reactImg from './images/react_logo.png';
+import htmlImg from './images/html_logo.png';
+import cssImg from './images/css_logo.png';
+import jsImg from './images/js_logo.png';
+
 
 /* Dynamic data
 const welcome = 'Welcome to 30 Days Of React'
@@ -57,6 +61,33 @@ const Button = ({text, onClick, style}) => {
     return <button style={style} onClick={onClick}>{text}</button>
 }
 
+const Icons = ({html, css, js, react}) => {
+    return (
+        <div className='img-wrapper'>
+            <h3>Functional Components</h3>
+            <img src={html} alt='' className='img-styles'/>
+            <img src={css} alt='' className='img-styles'/>
+            <img src={js} alt='' className='img-styles'/>
+            <img src={react} alt='' className='img-styles'/>
+        </div>
+
+    )
+}
+
+const SkillsList = ({skills}) => {
+
+    const skillsFormatted = skills.map((skill) => <li key={skill}> {skill} </li>)
+
+    return (
+        <div>
+            <h3> SKILLS </h3>
+            <ul className='skills-list'>
+                {skillsFormatted}
+            </ul>
+        </div>
+    )
+}
+
 // CSS styles in JavaScript Object
 const buttonStyles = {
     backgroundColor: '#61dbfb',
@@ -69,7 +100,7 @@ const buttonStyles = {
     color: 'white',
 }
 // React component for the main part of the website
-const Main = ({user, techs, handleTime, greetPeople, hexaColour}) => {
+const Main = ({user, techs, handleTime, greetPeople, hexaColour, urls, skills}) => {
     return (
         <main>
             <div className="main-wrapper">
@@ -88,6 +119,9 @@ const Main = ({user, techs, handleTime, greetPeople, hexaColour}) => {
                 <ul className='colours-wrapper'>
                     <HexaGen hexaColour={hexaColour}/>
                 </ul>
+
+                <Icons html={urls.html} css={urls.css} js={urls.js} react={urls.react}/>
+                <SkillsList skills={skills}/>
             </div>
         </main>
     )
@@ -144,6 +178,17 @@ function App() {
         return '#' + color
     }
 
+    const urls = {
+        html: htmlImg,
+        css: cssImg,
+        js: jsImg,
+        react: reactImg,
+    }
+
+    const skills = ['HTML','CSS','Sass','JS','React','Redux','Node',
+        'MongoDB', 'Python', 'Flask', 'Django', 'NumPy', 'Pandas', 'Data Analysis',
+        'MYSQL', 'GraphQL', 'D3.js', 'Gatsby', 'Docker', 'Heroku', 'Git']
+
     return (
         <div className="App">
             <Header data={data}/>
@@ -153,6 +198,8 @@ function App() {
                 handleTime={handleTime}
                 greetPeople={greetPeople}
                 hexaColour={hexaColour}
+                urls ={urls}
+                skills={skills}
             />
             <Footer date={date}/>
         </div>
