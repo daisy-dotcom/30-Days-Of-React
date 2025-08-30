@@ -26,7 +26,7 @@ const showDate = (time) => {
   return ` ${month} ${date}, ${year}`
 }
 
-// Header Component
+// header Component
 const Header = ({
   data: {
     welcome,

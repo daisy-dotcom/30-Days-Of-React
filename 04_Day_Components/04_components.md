@@ -199,7 +199,7 @@ Let's render first the _Header_ component.
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-// Header Component
+// header Component
 const Header = () => (
   <header>
     <div className='header-wrapper'>
@@ -225,7 +225,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import asabenehImage from './images/asabeneh.jpg'
 
-// Header Component
+// header Component
 const Header = () => (
   <header>
     <div className='header-wrapper'>

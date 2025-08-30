@@ -54,7 +54,7 @@ Functional React component
 
 import React from 'react'
 import ReactDOM from 'react-dom'
-// Header Component
+// header Component
 // Functional component
 const Header = () => (
   <header>

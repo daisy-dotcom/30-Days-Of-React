@@ -90,7 +90,7 @@ const author = {
 }
 const date = 'Oct 4, 2020'
 
-// Header Component
+// header Component
 const Header = () => (
   <header>
     <div className='header-wrapper'>
@@ -116,7 +116,7 @@ React props is an object which you get instantly when you create a React compone
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-// Header Component
+// header Component
 const Header = (props) => {
   console.log(props) // empty object, {}
   return (
@@ -157,7 +157,7 @@ Let's start with a simple example. In the example below, the welcome string has 
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-// Header Component
+// header Component
 const Header = (props) => {
   console.log(props) // {welcome:'Welcome to 30 Days Of React'}
   return (
@@ -204,7 +204,7 @@ The data type of the props we pass an attribute to the component is a string.
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-// Header Component
+// header Component
 const Header = (props) => {
   console.log(props)
   return (
@@ -262,7 +262,7 @@ As you can see from the above example, the value of the props are written static
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-// Header Component
+// header Component
 const Header = (props) => (
   <header>
     <div className='header-wrapper'>
@@ -424,7 +424,7 @@ We can change the previous Header props to object. For the time being let's chan
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-// Header Component
+// header Component
 const Header = (props) => {
   return (
     <header>
@@ -484,7 +484,7 @@ const showDate = (time) => {
   const date = time.getDate()
   return ` ${month} ${date}, ${year}`
 }
-// Header Component
+// header Component
 const Header = (props) => {
   return (
     <header>
@@ -697,7 +697,7 @@ const showDate = (time) => {
   const date = time.getDate()
   return ` ${month} ${date}, ${year}`
 }
-// Header Component
+// header Component
 const Header = (props) => {
   const data = props.data
   const { welcome, title, subtitle, author, date } = data
@@ -769,7 +769,7 @@ const showDate = (time) => {
   const date = time.getDate()
   return ` ${month} ${date}, ${year}`
 }
-// Header Component
+// header Component
 const Header = (props) => {
   const data = props.data
   const {
@@ -846,7 +846,7 @@ const showDate = (time) => {
   const date = time.getDate()
   return ` ${month} ${date}, ${year}`
 }
-// Header Component
+// header Component
 const Header = ({
   data: {
     welcome,
@@ -927,7 +927,7 @@ const showDate = (time) => {
   return ` ${month} ${date}, ${year}`
 }
 
-// Header Component
+// header Component
 const Header = ({
   data: {
     welcome,

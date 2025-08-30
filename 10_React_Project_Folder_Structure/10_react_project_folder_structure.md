@@ -153,7 +153,7 @@ import ReactDOM from 'react-dom'
 import asabenehImage from './images'
 import { countriesData } from './data/countries'
 
-// Header component
+// header component
 class Header extends React.Component {
   render() {
     console.log(this.props.data)
@@ -450,7 +450,7 @@ src
     -Forgotpassword.js
     -Resetpassord.js
   header
-   -Header.js
+   -header.js
   footer
    -Footer.js
   assets
@@ -473,7 +473,7 @@ src
 Let's create components directory inside src and inside components let's create header director. Create Header.js inside the header directory.
 
 ```js
-// src/components/header/Header.js
+// src/components/header/header.js
 import React from 'react'
 
 const Header = (props) => {

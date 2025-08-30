@@ -33,7 +33,7 @@ const HexaColor = () => {
   )
 }
 
-// Header Component
+// header Component
 const Header = () => (
   <header>
     <div className='header-wrapper'>

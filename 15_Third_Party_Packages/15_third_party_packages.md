@@ -92,7 +92,7 @@ header {
 ```
 
 ```js
-// Header.js
+// header.js
 import React from 'react'
 import './styles/header.scss
 const Header = () = (
@@ -158,7 +158,7 @@ Naming:
 ```
 
 ```js
-// Header.js
+// header.js
 import React from 'react'
 import headerStyles from  './styles/header.module.scss
 // We can all destructure the class name
