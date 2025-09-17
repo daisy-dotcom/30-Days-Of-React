@@ -3,7 +3,7 @@ import './styles/App.css';
 import Header from "./parts/Header";
 import Footer from "./parts/Footer";
 import Main from "./components/Main";
-
+import showDate from "./utils/showDate"
 
 class App extends React.Component {
   state = {
@@ -36,7 +36,7 @@ class App extends React.Component {
   }
 
   diurnalColour = () => {
-    let hour = new Date("August 17, 1995 21:24:00").getHours()
+    let hour = new Date().getHours()
     let quarter = Math.floor(hour/6)
 
     const hourlyColours = {
@@ -45,7 +45,7 @@ class App extends React.Component {
       2: '#D4F941',
       3: '#8D6F64',
     }
-    setTimeout(this.changeBackground(hourlyColours[quarter]), 2000)
+   this.changeBackground(hourlyColours[quarter])
 
   }
 
@@ -64,29 +64,9 @@ class App extends React.Component {
       loggedIn: !this.state.loggedIn,
     })
   }
-  showDate = (time) => {
-    const months = [
-      'January',
-      'February',
-      'March',
-      'April',
-      'May',
-      'June',
-      'July',
-      'August',
-      'September',
-      'October',
-      'November',
-      'December',
-    ]
 
-    const month = months[time.getMonth()].slice(0, 3)
-    const year = time.getFullYear()
-    const date = time.getDate()
-    return `${month} ${date}, ${year}`
-  }
   handleTime = () => {
-    let message = this.showDate(new Date())
+    let message = showDate(new Date())
     this.setState({ message })
   }
   greetPeople = () => {

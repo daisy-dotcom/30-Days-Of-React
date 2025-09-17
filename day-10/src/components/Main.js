@@ -3,7 +3,7 @@ import Welcome from "./WelcomeMessage";
 import Login from "./LoginMessage";
 import Message from "./Message";
 import Button from "./Button";
-import TechList from "./TechList";
+import Tech from "./Tech";
 import buttonStyles from "../styles/ButtonStyles";
 
 class Main extends React.Component {
@@ -25,9 +25,9 @@ class Main extends React.Component {
             <main>
                 <div className='main-wrapper'>
                     <p>Prerequisite to get started react.js:</p>
-                    <ul>
-                        <TechList techs={this.props.techs} />
-                    </ul>
+
+                    <Tech techs={this.props.techs} />
+
                     {techs.length === 3 && (
                         <p>You have all the prerequisite courses to get started React</p>
                     )}
